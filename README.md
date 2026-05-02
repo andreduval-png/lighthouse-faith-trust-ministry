@@ -15,6 +15,13 @@ npm run dev
 npm run build
 ```
 
+## Vercel Deployment
+
+- Framework preset: Vite
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: `dist`
+
 ## Integration TODOs
 
 - Connect inquiry forms to an email, CRM, Supabase, Formspree, or existing backend endpoint.

@@ -243,9 +243,9 @@ export const advocacyPillars: CardContent[] = [
     icon: "heart",
   },
   {
-    title: "Financial Identity Education",
+    title: "Restoration Planning",
     description:
-      "Education about public consumer-protection resources for trafficking-related financial harm, without credit-repair promises.",
+      "Support creating practical next-step plans for safety, referrals, documentation, family needs, and ongoing care.",
     icon: "shield",
   },
   {
@@ -265,7 +265,7 @@ export const stabilizationSteps = [
   {
     day: "Day 2",
     title: "Documents & Resource Map",
-    text: "Organize available identity, housing, financial, legal, and support documents while identifying trusted referral partners.",
+    text: "Organize available identity, housing, legal, family, and support documents while identifying trusted referral partners.",
   },
   {
     day: "Day 3",
@@ -303,11 +303,5 @@ export const officialAdvocacyResources = [
     title: "OVC Human Trafficking Training",
     description: "Training and technical assistance resources for victim service providers and anti-trafficking stakeholders.",
     href: "https://ovc.ojp.gov/program/human-trafficking/training-and-technical-assistance",
-  },
-  {
-    title: "CFPB Trafficking-Related Credit Reporting Guidance",
-    description:
-      "Public consumer information about blocking adverse consumer-reporting items that resulted from trafficking.",
-    href: "https://www.consumerfinance.gov/ask-cfpb/im-a-victim-of-trafficking-how-can-i-block-items-from-my-credit-report-that-are-the-result-of-trafficking-en-2127/",
   },
 ];

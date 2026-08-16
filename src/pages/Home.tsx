@@ -84,7 +84,7 @@ export function Home() {
             <h2 className="font-serif text-2xl font-semibold text-navy-950">A careful public promise</h2>
             <p className="mt-4 leading-8 text-ink/78">
               The ministry can support survivors in organizing next steps and connecting with qualified resources, while
-              avoiding credit-repair promises, legal claims, or pressure to disclose sensitive details publicly.
+              avoiding legal claims, professional-service claims, or pressure to disclose sensitive details publicly.
             </p>
             <Link
               className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-navy-800"

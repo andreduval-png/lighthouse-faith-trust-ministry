@@ -68,7 +68,7 @@ const advocacySupportAreas = [
   "Referral navigation",
   "Documentation organization",
   "Benevolence or community resource referral",
-  "Financial identity recovery education",
+  "Restoration planning",
   "Training or volunteer interest",
   "Partnership or coalition inquiry",
 ];

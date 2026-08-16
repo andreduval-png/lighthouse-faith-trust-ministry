@@ -25,14 +25,14 @@ export function SurvivorAdvocacy() {
           <SectionHeading
             eyebrow="Program purpose"
             title="Care that protects dignity, consent, and trust."
-            lead="Human trafficking can leave spiritual, practical, financial, housing, identity, and family harm. Lighthouse aims to help people take the next faithful step without pressure, shame, or public exposure."
+            lead="Human trafficking can leave spiritual, practical, housing, identity, family, and community harm. Lighthouse aims to help people take the next faithful step without pressure, shame, or public exposure."
           />
           <div className="surface-card p-6">
             <h2 className="font-serif text-2xl font-semibold text-navy-950">What Lighthouse does</h2>
             <p className="mt-4 leading-8 text-ink/78">
               We provide education, pastoral care upon request, non-emergency referral navigation, documentation
-              organization, benevolence review, and partnership development. We do not provide legal advice, financial
-              advice, credit repair services, certification of survivor status, or guaranteed outcomes.
+              organization, benevolence review, and partnership development. We do not provide legal advice, licensed
+              counseling, emergency response, professional case management, or formal verification of survivor status.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink to="#advocacy-inquiry" variant="primary">
@@ -84,22 +84,22 @@ export function SurvivorAdvocacy() {
       <section className="bg-navy-950 py-16 text-white">
         <div className="container-padded grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-sm font-bold uppercase text-gold-300">Financial identity recovery</p>
+            <p className="text-sm font-bold uppercase text-gold-300">Documentation and referral support</p>
             <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
-              Education and documentation support without credit-repair claims.
+              Survivor-centered help for organizing the next faithful step.
             </h2>
             <p className="mt-5 leading-8 text-sand-50/86">
-              Trafficking-related exploitation can affect identity documents, accounts, housing records, consumer
-              reports, employment, and family stability. Lighthouse can help organize information and connect survivors
-              to qualified resources while keeping the public message centered on restoration.
+              Trafficking-related exploitation can affect identity documents, housing stability, employment, family
+              relationships, safety, and spiritual well-being. Lighthouse can help organize information and connect
+              survivors to qualified resources while keeping the public message centered on restoration.
             </p>
           </div>
           <div className="grid gap-4">
             {[
               "We can help survivors organize documents and prepare questions for qualified providers.",
-              "We can share public educational resources about trafficking-related consumer-reporting protections.",
               "We can connect people with legal aid, victim service providers, counselors, and local support resources.",
-              "We do not guarantee credit outcomes, submit disputes without consent, or present advocacy as credit repair.",
+              "We can review practical needs for possible benevolence support or trusted community referrals.",
+              "We keep advocacy centered on consent, confidentiality, dignity, and survivor safety.",
             ].map((item) => (
               <div className="rounded-lg border border-white/15 bg-white/8 p-5 text-sm font-semibold leading-6 text-sand-50" key={item}>
                 {item}
@@ -168,7 +168,7 @@ export function SurvivorAdvocacy() {
               <p className="mt-3 leading-7 text-ink/75">
                 This ministry page is for faith-based support, education, referral navigation, and informational
                 purposes. It does not replace emergency services, law enforcement, licensed counseling, legal advice,
-                financial advice, or professional case management.
+                or professional case management.
               </p>
             </div>
           </div>

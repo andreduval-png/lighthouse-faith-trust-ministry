@@ -9,8 +9,8 @@ export function Ministries() {
     <>
       <PageHeader
         eyebrow="Ministries"
-        lead="Our work brings together discipleship, education, benevolence, family support, and faithful administration of ministry resources."
-        title="Ministry programs for faith and community support."
+        lead="Our work brings together discipleship, education, survivor advocacy, benevolence, family support, and faithful administration of ministry resources."
+        title="Ministry programs for faith, restoration, and community support."
       />
 
       <section className="bg-white py-16">
@@ -19,7 +19,7 @@ export function Ministries() {
             align="center"
             eyebrow="Our work"
             title="Serving with care, discretion, and purpose."
-            lead="Each ministry area is designed to support spiritual growth, fellowship, practical care, and community strengthening."
+            lead="Each ministry area is designed to support spiritual growth, fellowship, practical care, survivor restoration, and community strengthening."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {ministryPrograms.map((program) => (
@@ -37,7 +37,14 @@ export function Ministries() {
             lead="The ministry seeks to serve people without spectacle. Assistance, teaching, and community support are handled with prayerful care, dignity, and stewardship."
           />
           <div className="grid gap-4 sm:grid-cols-2">
-            {["Prayerful discernment", "Confidential care", "Resource stewardship", "Family encouragement"].map((item) => (
+            {[
+              "Prayerful discernment",
+              "Confidential care",
+              "Resource stewardship",
+              "Family encouragement",
+              "Survivor-centered referrals",
+              "Documentation support",
+            ].map((item) => (
               <div className="rounded-lg border border-sand-200 bg-white p-5 text-lg font-semibold text-navy-950" key={item}>
                 {item}
               </div>
@@ -49,8 +56,8 @@ export function Ministries() {
       <CTASection
         primaryLabel="Become a Member"
         primaryTo="/membership"
-        secondaryLabel="Support the Work"
-        secondaryTo="/donate"
+        secondaryLabel="Survivor Advocacy"
+        secondaryTo="/survivor-advocacy"
         text="Your participation, prayers, gifts, and service can help the ministry serve families and communities with faith and integrity."
         title="Partner with the ministry's mission."
       />

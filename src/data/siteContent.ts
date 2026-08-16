@@ -41,6 +41,7 @@ export const navItems: NavItem[] = [
   { label: "About", path: "/about" },
   { label: "Faith", path: "/statement-of-faith" },
   { label: "Ministries", path: "/ministries" },
+  { label: "Advocacy", path: "/survivor-advocacy" },
   { label: "Membership", path: "/membership" },
   { label: "Donate", path: "/donate" },
   { label: "Benevolence", path: "/benevolence" },
@@ -118,6 +119,12 @@ export const ministryPrograms: CardContent[] = [
     icon: "heart",
   },
   {
+    title: "Survivor Advocacy & Restoration",
+    description:
+      "Survivor-centered support for people affected by human trafficking, including education, referrals, documentation organization, and restoration planning.",
+    icon: "hands",
+  },
+  {
     title: "Education & Advocacy",
     description: "Educational resources, community guidance, and faith-based instruction.",
     icon: "compass",
@@ -189,6 +196,11 @@ export const donationCategories: CardContent[] = [
     icon: "heart",
   },
   {
+    title: "Survivor Advocacy",
+    description: "Support education, referral navigation, documentation support, and survivor restoration outreach.",
+    icon: "hands",
+  },
+  {
     title: "Family & Community Support",
     description: "Encourage programs that strengthen households and local community care.",
     icon: "home",
@@ -202,5 +214,100 @@ export const donationCategories: CardContent[] = [
     title: "Events & Outreach",
     description: "Help gatherings, service projects, and community outreach move forward.",
     icon: "users",
+  },
+];
+
+export const advocacyPillars: CardContent[] = [
+  {
+    title: "Survivor-Centered Advocacy",
+    description:
+      "Respectful support that honors consent, confidentiality, safety, dignity, and each person's pace of restoration.",
+    icon: "hands",
+  },
+  {
+    title: "Referral Navigation",
+    description:
+      "Connection to qualified anti-trafficking, legal aid, housing, counseling, healthcare, and community resources.",
+    icon: "compass",
+  },
+  {
+    title: "Documentation Support",
+    description:
+      "Help organizing records, identity documents, correspondence, and next-step checklists for appropriate referrals.",
+    icon: "book",
+  },
+  {
+    title: "Benevolence Coordination",
+    description:
+      "Prayerful review of practical needs and careful coordination of ministry support or trusted community resources.",
+    icon: "heart",
+  },
+  {
+    title: "Financial Identity Education",
+    description:
+      "Education about public consumer-protection resources for trafficking-related financial harm, without credit-repair promises.",
+    icon: "shield",
+  },
+  {
+    title: "Community Training",
+    description:
+      "Awareness and prevention education for members, families, volunteers, and partner organizations.",
+    icon: "users",
+  },
+];
+
+export const stabilizationSteps = [
+  {
+    day: "Day 1",
+    title: "Safety, Consent & Triage",
+    text: "Begin with a calm intake, consent boundaries, safe contact preferences, immediate needs, and referral priorities.",
+  },
+  {
+    day: "Day 2",
+    title: "Documents & Resource Map",
+    text: "Organize available identity, housing, financial, legal, and support documents while identifying trusted referral partners.",
+  },
+  {
+    day: "Day 3",
+    title: "Referral Coordination",
+    text: "Help prepare questions, contact appropriate providers, and connect the survivor to qualified social, legal, and community resources.",
+  },
+  {
+    day: "Day 4",
+    title: "Restoration Plan & Follow-Up",
+    text: "Create a practical next-step plan for support, follow-up, benevolence review, and ongoing ministry care where welcomed.",
+  },
+];
+
+export const advocacyReadinessSteps = [
+  "Complete trauma-informed anti-trafficking training for ministry leaders and volunteers.",
+  "Adopt confidentiality, consent, privacy, mandatory reporting, referral, and safety policies.",
+  "Build relationships with local coalitions, victim service providers, legal aid, counseling, housing, and healthcare partners.",
+  "Create survivor-centered intake, consent, referral, documentation support, and follow-up forms.",
+  "Apply for appropriate referral directory inclusion and maintain accurate public service information.",
+  "Review the program periodically for accountability, stewardship, training needs, and survivor safety.",
+];
+
+export const officialAdvocacyResources = [
+  {
+    title: "National Human Trafficking Referral Directory",
+    description: "A public directory for organizations and programs offering anti-trafficking services and resources.",
+    href: "https://humantraffickinghotline.org/en/service-provider-search",
+  },
+  {
+    title: "HHS SOAR Training",
+    description: "Training from HHS/OTIP to help professionals recognize, respond to, and support people impacted by trafficking.",
+    href: "https://acf.gov/otip/training-technical-assistance/soar-health-and-wellness",
+  },
+  {
+    title: "OVC Human Trafficking Training",
+    description: "Training and technical assistance resources for victim service providers and anti-trafficking stakeholders.",
+    href: "https://ovc.ojp.gov/program/human-trafficking/training-and-technical-assistance",
+  },
+  {
+    title: "CFPB Trafficking-Related Credit Reporting Guidance",
+    description:
+      "Public consumer information about blocking adverse consumer-reporting items that resulted from trafficking.",
+    href: "https://www.consumerfinance.gov/ask-cfpb/im-a-victim-of-trafficking-how-can-i-block-items-from-my-credit-report-that-are-the-result-of-trafficking-en-2127/",
   },
 ];

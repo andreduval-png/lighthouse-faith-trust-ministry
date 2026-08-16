@@ -11,6 +11,7 @@ import { Ministries } from "./pages/Ministries";
 import { MissionVision } from "./pages/MissionVision";
 import { NotFound } from "./pages/NotFound";
 import { StatementOfFaith } from "./pages/StatementOfFaith";
+import { SurvivorAdvocacy } from "./pages/SurvivorAdvocacy";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="mission-vision" element={<MissionVision />} />
         <Route path="statement-of-faith" element={<StatementOfFaith />} />
         <Route path="ministries" element={<Ministries />} />
+        <Route path="survivor-advocacy" element={<SurvivorAdvocacy />} />
         <Route path="membership" element={<Membership />} />
         <Route path="donate" element={<Donate />} />
         <Route path="benevolence" element={<Benevolence />} />

@@ -24,6 +24,7 @@ export function Home() {
               "Biblical teaching",
               "Charitable works",
               "Mutual aid and benevolence",
+              "Survivor advocacy and restoration",
               "Education and advocacy",
               "Stewardship of resources",
               "Support for families and communities",
@@ -57,17 +58,40 @@ export function Home() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow="Our work"
-              title="Ministries shaped by discipleship and care."
-              lead="From biblical teaching to benevolence, each ministry area supports the mission with warmth, discretion, and accountability."
+              title="Ministries shaped by discipleship, advocacy, and care."
+              lead="From biblical teaching to survivor advocacy and benevolence, each ministry area supports the mission with warmth, discretion, and accountability."
             />
             <Link className="focus-ring rounded-md text-sm font-bold text-navy-900 underline decoration-gold-400 underline-offset-4" to="/ministries">
               View all ministries
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {ministryPrograms.slice(0, 3).map((program) => (
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {ministryPrograms.slice(0, 4).map((program) => (
               <MinistryCard item={program} key={program.title} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-sand-50 py-16">
+        <div className="container-padded grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <SectionHeading
+            eyebrow="Survivor advocacy"
+            title="A meaningful pathway for people affected by trafficking."
+            lead="Lighthouse is building a survivor restoration program focused on education, referral navigation, documentation support, benevolence coordination, and faith-centered care where welcomed."
+          />
+          <div className="surface-card p-6">
+            <h2 className="font-serif text-2xl font-semibold text-navy-950">A careful public promise</h2>
+            <p className="mt-4 leading-8 text-ink/78">
+              The ministry can support survivors in organizing next steps and connecting with qualified resources, while
+              avoiding credit-repair promises, legal claims, or pressure to disclose sensitive details publicly.
+            </p>
+            <Link
+              className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-navy-800"
+              to="/survivor-advocacy"
+            >
+              Explore Survivor Advocacy
+            </Link>
           </div>
         </div>
       </section>

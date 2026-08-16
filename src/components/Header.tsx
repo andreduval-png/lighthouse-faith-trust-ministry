@@ -5,7 +5,7 @@ import { Icon } from "./Icons";
 import { Logo } from "./Logo";
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
-  `focus-ring rounded-md px-3 py-2 text-sm font-semibold transition ${
+  `focus-ring rounded-md px-2.5 py-2 text-sm font-semibold transition ${
     isActive ? "bg-gold-100 text-navy-950" : "text-ink/78 hover:bg-sand-100 hover:text-navy-950"
   }`;
 
@@ -22,7 +22,7 @@ export function Header() {
       <div className="container-padded flex min-h-20 items-center justify-between gap-4">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary navigation">
           {navItems.map((item) => (
             <NavLink key={item.path} className={navClass} to={item.path}>
               {item.label}
@@ -31,7 +31,7 @@ export function Header() {
         </nav>
 
         <button
-          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-sand-200 text-navy-950 lg:hidden"
+          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-sand-200 text-navy-950 xl:hidden"
           type="button"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
@@ -42,7 +42,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-sand-200 bg-white lg:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-sand-200 bg-white xl:hidden" aria-label="Mobile navigation">
           <div className="container-padded grid gap-1 py-4">
             {navItems.map((item) => (
               <NavLink key={item.path} className={navClass} to={item.path}>

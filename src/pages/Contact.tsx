@@ -8,7 +8,7 @@ export function Contact() {
     <>
       <PageHeader
         eyebrow="Contact"
-        lead="We welcome sincere inquiries from individuals and families seeking faith, fellowship, support, or opportunities to serve."
+        lead="We welcome sincere inquiries from individuals and families seeking faith, fellowship, survivor advocacy, support, or opportunities to serve."
         title="Connect with Lighthouse Faith & Trust Ministry."
       />
 
@@ -18,7 +18,7 @@ export function Contact() {
             <SectionHeading
               eyebrow="Inquiries"
               title="How can we help?"
-              lead="Use the form for general questions, ministry support, membership, donation, or benevolence inquiries."
+              lead="Use the form for general questions, ministry support, membership, donation, benevolence, survivor advocacy, or partnership inquiries."
             />
             <div className="mt-8 rounded-lg border border-sand-200 bg-sand-50 p-6">
               <h2 className="text-xl font-semibold text-navy-950">Public contact information</h2>

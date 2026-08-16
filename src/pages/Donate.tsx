@@ -20,7 +20,7 @@ export function Donate() {
             align="center"
             eyebrow="Giving areas"
             title="Choose a ministry purpose to support."
-            lead="Gifts help sustain worship, discipleship, benevolence, education, outreach, and practical community support."
+            lead="Gifts help sustain worship, discipleship, survivor advocacy, benevolence, education, outreach, and practical community support."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {donationCategories.map((category) => (
@@ -55,6 +55,14 @@ export function Donate() {
               >
                 Give to Benevolence Fund
               </a>
+              <a
+                className="focus-ring rounded-md bg-navy-800 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-navy-700"
+                href={donationUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Support Survivor Advocacy
+              </a>
               <Link
                 className="focus-ring rounded-md border border-navy-900 px-5 py-3 text-center text-sm font-semibold text-navy-950 transition hover:bg-white"
                 to="/contact"
@@ -73,8 +81,8 @@ export function Donate() {
       <CTASection
         primaryLabel="Contact Us About Giving"
         primaryTo="/contact"
-        secondaryLabel="Support Benevolence"
-        secondaryTo="/benevolence"
+        secondaryLabel="Survivor Advocacy"
+        secondaryTo="/survivor-advocacy"
         text="Stewardship includes clear purpose, careful administration, and responsible communication with supporters."
         title="Thank you for helping the ministry serve."
       />

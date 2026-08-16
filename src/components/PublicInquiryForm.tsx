@@ -1,6 +1,6 @@
 import { FormEvent, useMemo, useState } from "react";
 
-type FormKind = "membership" | "benevolence" | "contact";
+type FormKind = "membership" | "benevolence" | "contact" | "advocacy";
 
 type PublicInquiryFormProps = {
   kind: FormKind;
@@ -39,6 +39,7 @@ const interestAreas = [
   "Faith & Discipleship",
   "Fellowship",
   "Benevolence & Mutual Aid",
+  "Survivor Advocacy & Restoration",
   "Education",
   "Family & Community Support",
   "Stewardship",
@@ -51,6 +52,7 @@ const inquiryTypes = [
   "Membership inquiry",
   "Donation inquiry",
   "Benevolence inquiry",
+  "Survivor advocacy inquiry",
 ];
 
 const needTypes = [
@@ -62,6 +64,15 @@ const needTypes = [
   "Other practical need",
 ];
 
+const advocacySupportAreas = [
+  "Referral navigation",
+  "Documentation organization",
+  "Benevolence or community resource referral",
+  "Financial identity recovery education",
+  "Training or volunteer interest",
+  "Partnership or coalition inquiry",
+];
+
 const urgencyLevels = ["Routine", "Soon", "Urgent"];
 
 export function PublicInquiryForm({ kind, title, submitLabel, checkboxLabel }: PublicInquiryFormProps) {
@@ -71,11 +82,19 @@ export function PublicInquiryForm({ kind, title, submitLabel, checkboxLabel }: P
 
   const fields = useMemo(
     () => ({
-      showCityState: kind === "membership",
+      showCityState: kind === "membership" || kind === "advocacy",
       showInterest: kind === "membership",
       showInquiryType: kind === "contact",
-      showNeed: kind === "benevolence",
-      messageLabel: kind === "benevolence" ? "Brief description" : "Message",
+      showNeed: kind === "benevolence" || kind === "advocacy",
+      showUrgency: kind === "benevolence",
+      needLabel: kind === "advocacy" ? "Support area" : "Type of need",
+      needOptions: kind === "advocacy" ? advocacySupportAreas : needTypes,
+      messageLabel:
+        kind === "benevolence"
+          ? "Brief description"
+          : kind === "advocacy"
+            ? "Brief, non-sensitive message"
+            : "Message",
     }),
     [kind],
   );
@@ -93,7 +112,7 @@ export function PublicInquiryForm({ kind, title, submitLabel, checkboxLabel }: P
     if (fields.showInterest && !form.interestArea) nextErrors.interestArea = "Please choose an interest area.";
     if (fields.showInquiryType && !form.inquiryType) nextErrors.inquiryType = "Please choose an inquiry type.";
     if (fields.showNeed && !form.needType) nextErrors.needType = "Please choose a type of need.";
-    if (fields.showNeed && !form.urgency) nextErrors.urgency = "Please choose an urgency level.";
+    if (fields.showUrgency && !form.urgency) nextErrors.urgency = "Please choose an urgency level.";
     if (!form.message.trim()) nextErrors.message = "Please include a brief message.";
     if (!form.consent) nextErrors.consent = "Please confirm consent before submitting.";
     return nextErrors;
@@ -136,6 +155,12 @@ export function PublicInquiryForm({ kind, title, submitLabel, checkboxLabel }: P
   return (
     <form className="surface-card grid gap-5 p-6" noValidate onSubmit={handleSubmit}>
       <h2 className="font-serif text-2xl font-semibold text-navy-950">{title}</h2>
+      {kind === "advocacy" ? (
+        <p className="rounded-lg border border-gold-300 bg-gold-100/70 p-4 text-sm leading-6 text-navy-950">
+          Please do not include urgent safety details, identifying information about another person, or a full trafficking
+          history in this form. If someone is in immediate danger, contact local emergency services.
+        </p>
+      ) : null}
       <div className="grid gap-5 md:grid-cols-2">
         <TextInput
           error={errors.name}
@@ -198,25 +223,27 @@ export function PublicInquiryForm({ kind, title, submitLabel, checkboxLabel }: P
       ) : null}
 
       {fields.showNeed ? (
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className={`grid gap-5 ${fields.showUrgency ? "md:grid-cols-2" : ""}`}>
           <SelectInput
             error={errors.needType}
-            label="Type of need"
+            label={fields.needLabel}
             name="needType"
             onChange={(value) => updateField("needType", value)}
-            options={needTypes}
+            options={fields.needOptions}
             required
             value={form.needType}
           />
-          <SelectInput
-            error={errors.urgency}
-            label="Urgency"
-            name="urgency"
-            onChange={(value) => updateField("urgency", value)}
-            options={urgencyLevels}
-            required
-            value={form.urgency}
-          />
+          {fields.showUrgency ? (
+            <SelectInput
+              error={errors.urgency}
+              label="Urgency"
+              name="urgency"
+              onChange={(value) => updateField("urgency", value)}
+              options={urgencyLevels}
+              required
+              value={form.urgency}
+            />
+          ) : null}
         </div>
       ) : null}
 

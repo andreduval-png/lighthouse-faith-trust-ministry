@@ -27,3 +27,4 @@ npm run build
 - Connect inquiry forms to an email, CRM, Supabase, Formspree, or existing backend endpoint.
 - Donation CTAs currently route to Zeffy: https://www.zeffy.com/en-US/donation-form/empower-more
 - Public ministry email contacts are listed in the Contact page and Footer.
+- Survivor advocacy inquiries are frontend-only until connected to an approved backend/contact workflow.
